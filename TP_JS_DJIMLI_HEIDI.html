@@ -1,0 +1,58 @@
+<head>
+  <title>Écriture d'une fonction simple</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script type="text/javascript"> 
+  
+
+  var tab = new Array ("4","675","32","87","9837","364","7492","45","345","324","374","8364","5967","12","483","8573","659","365","9573","309"); // Création du tableau
+
+
+
+  function quiEstLeNombreLePlusGrand(a,b)   // Désigne le nombre le plus grand 
+  { 
+	  Math.max([a,b]);
+  }
+    
+  
+  function aleatoireNombre(a) // Sors un nombre aléatoire entre 0 et a 
+  {
+
+    return Math.random(0)*a;
+
+  }
+
+  function affectation(a,b) // Affecte b dans l'indice A , ne fonctionne pas >> Unexpected token '['
+  {
+     var tab[a] = b;
+
+  }
+  
+  function jeu() // Fonctionnement du jeu 
+  {
+
+   for (i = 0; i < 5; i++) 
+   {
+     var x = aleatoireNombre(tab.length);
+     var y = aleatoireNombre(tab.length);
+
+     if (x==y) return "Perdu !"
+    else quiEstLeNombreLePlusGrand(x,y);
+
+    alert.aleatoireNombre(x);
+    alert.aleatoireNombre(y);
+   
+    }
+
+
+  }
+  
+  </script>
+</head>
+<body>
+
+
+
+<p>Lancer le jeu&nbsp;: <button onclick="jeu();">Go</button></p>
+
+</body>
+</html>
